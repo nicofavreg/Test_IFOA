@@ -1,9 +1,8 @@
 import requests
-import os
+# import os
 import pandas as pd
 import streamlit as st
 # from dotenv import load_dotenv
-import math
 from datetime import datetime
 # load_dotenv()
 
