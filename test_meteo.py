@@ -2,11 +2,13 @@ import requests
 import os
 import pandas as pd
 import streamlit as st
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import math
 from datetime import datetime
-load_dotenv()
+# load_dotenv()
 
+API_key = st.secrets["api_key"]
+# API_key = os.getenv('api_key')
 
 
 
@@ -15,7 +17,7 @@ def main():
     st.text("creata da Nico")
     st.divider()
 
-    API_key = os.getenv('api_key')
+    
     city_name = st.text_input('inserisci la città:', "reggiolo")
     url = f'https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_key}'
     result = requests.get(url)
@@ -63,7 +65,7 @@ def main():
         st.write(situa)
         st.write(f'umidità: {umidita}%')
         st.write(f'visibilità: {visibilita} metri')
-        st.write(f'velocità vento: {vel_vento} con raffiche di {raffiche} m/s')
+        st.write(f'velocità vento: {vel_vento} m/s con raffiche di {raffiche} m/s')
         st.write(f'pressione atmosferica: {pressione} hPa')
         st.write(f"il tramonto è alle ore {tramonto}")
 
