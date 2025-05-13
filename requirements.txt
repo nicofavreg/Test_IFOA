@@ -1,0 +1,7 @@
+streamlib
+pandas
+matplotlib
+saeborn
+numpy
+spacy
+sklearn
