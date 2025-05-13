@@ -1,7 +1,5 @@
-streamlib
+streamlit
 pandas
 matplotlib
 saeborn
 numpy
-spacy
-sklearn
